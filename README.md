@@ -1,16 +1,61 @@
-# React + Vite
+# PrintBord - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page moderna para a gráfica PrintBord, desenvolvida com React + Vite.
 
-Currently, two official plugins are available:
+## Stack Tecnológico
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 18** - UI library
+- **Vite** - Build tool
+- **CSS3** - Styling
+- **ESLint** - Code linting
 
-## React Compiler
+## Estrutura do Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+├── components/       # Componentes reutilizáveis
+├── styles/          # Arquivos CSS globais
+├── assets/          # Imagens e recursos
+├── App.jsx          # Componente principal
+└── main.jsx         # Ponto de entrada
+```
 
-## Expanding the ESLint configuration
+## Como Usar
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Instalação
+```bash
+npm install
+```
+
+### Desenvolvimento
+```bash
+npm run dev
+```
+
+### Build para Produção
+```bash
+npm run build
+```
+
+### Preview do Build
+```bash
+npm run preview
+```
+
+## Componentes Principais
+
+- **Header** - Navegação
+- **Hero** - Seção inicial
+- **Services** - Serviços oferecidos
+- **ProductGrid** - Grid de produtos
+- **Portfolio** - Portfólio
+- **Testimonials** - Depoimentos
+- **Footer** - Rodapé
+
+## Deploy
+
+O projeto está pronto para ser deployado no GitHub Pages, Vercel ou Netlify.
+
+---
+
+**Autor:** Vinicius Lacerda
