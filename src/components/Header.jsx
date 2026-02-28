@@ -1,3 +1,4 @@
+import logoImg from '../Imagens/logo1.png'
 import './Header.css'
 
 export default function Header() {
@@ -5,7 +6,7 @@ export default function Header() {
     <header className="header">
       <div className="container header-content">
         <div className="logo">
-          <img src="/src/Imagens/logo1.png" alt="Printbord Logo" />
+          <img src={logoImg} alt="Printbord Logo" />
         </div>
         <nav className="nav">
           <a href="#catalogo">Catálogo</a>
