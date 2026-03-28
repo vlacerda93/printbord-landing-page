@@ -1,0 +1,68 @@
+Sugestões de Imagens/Fotos para modernizar o site Printbord Gráfica (vibe 2026, high-quality, profissional, criativa):
+
+1. **Hero Background**: Foto em ultra HD de uma impressora digital moderna em ação, com tintas CMYK vibrantes jorrando (efeito cinematic). Alternativa: Mockup 3D de produtos impressos flutuando sobre mesa minimalista branca, lighting studio pro.
+
+2. **Serviços Section**:
+   - Cartões & Papelaria: Stack de business cards com foil gold/hot stamping, close-up macro.
+   - Banners & Adesivos: Banner grande instalado em fachada urbana moderna, dia/noite.
+   - Embalagens: Caixa personalizada aberta mostrando produto dentro (ex: perfume ou gift).
+   - Camisetas & Uniformes: Modelo vestindo t-shirt customizada em cenário urbano cool.
+   - Etiquetas & Tags: Rolos de etiquetas adesivas com designs minimalistas.
+   - Catálogos: Catálogo aberto em mesa com acabamento premium (laminação soft-touch).
+
+3. **Portfolio/Galeria**: Grid Instagram-like com 12+ fotos reais de projetos: brindes corporativos (canetas, keychains), bordados em roupas, sinalização LED/backlit, embalagens e-commerce ready.
+
+4. **HowItWorks**: Infográficos ilustrados ou fotos step-by-step: design no laptop -> prova digital -> impressão -> entrega embalada.
+
+5. **Testimonials**: Fotos autênticas de clientes felizes segurando produtos impressos, diversidade (homens/mulheres, idades).
+
+6. **TrustSection**: Logos de clientes em b/n com glow hover, foto do time criativo no estúdio.
+
+7. **Backgrounds/Subtle**: Texturas sutis de papel amassado, ink splatters abstratos, gradients CMYK para overlays.
+
+Fontes recomendadas:
+- Unsplash/Pexels: 'printing press', 'graphic design mockup', 'custom t-shirt'.
+- Freepik/Pixabay para vetores.
+- Midjourney/DALL-E para custom: 'professional printing studio 2026, cyberpunk minimal'.
+
+Baixe em alta res (min 1920x1080), otimize com TinyPNG, nomeie como hero-modern.png, services-cartoes.jpg etc.
+
+Isso vai elevar o site pra nível Awwwards!
+
+
+
+
+querido eu gerei 11 imagens com essa sugestão que você me deu, eu dei esses prompts aqui para você entender qual é cada imagem, na pasta(/home/vinicius/Área de trabalho/Faculdade/Projetos/printbord-landing-page/src/Imagens) as imagens seguem a ordem dos numeros a imagem 1.png é a Hero Background, a 2.png é a dos cartões de visita e assim por diante. para você entender oque é cada imagem melhor.
+
+1. HERO BACKGROUND (O Impacto Inicial)
+Prompt: Cinematic ultra-HD photo of a high-tech large format digital printer in a minimalist studio. Vibrant liquid CMYK inks (Cyan, Magenta, Yellow) splashing in mid-air with high-speed photography effect. Professional studio lighting, bokeh background, 8k resolution, industrial chic aesthetic.
+
+2. CARTÕES DE VISITA PREMIUM (Serviços)
+Prompt: Extreme macro close-up of a stack of premium matte black business cards. Features elegant gold foil stamping and embossed typography for 'Printbord'. Soft-touch texture visible, sharp focus on the gilded edges, luxury lighting, neutral grey background.
+
+3. COMUNICAÇÃO VISUAL & BANNERS (Serviços)
+Prompt: A large, vibrant vinyl banner installed on a modern glass building facade in a sunny metropolitan area. High-contrast colors, realistic shadows, wide-angle shot. The design on the banner is clean and modern. Urban architecture background, 4k.
+
+4. EMBALAGENS PERSONALIZADAS (Serviços)
+Prompt: High-end product packaging mockup. A half-open luxury cardboard box with custom branding inside. Inside, a glimpse of a premium gift item. Soft studio lighting, minimalist aesthetic, focus on the paper texture and precise folds. 
+
+5. UNIFORMES E CAMISETAS (Serviços)
+Prompt: A stylish model in an urban alleyway wearing a high-quality custom black t-shirt with a vibrant, detailed screen-printed design. Sharp focus on the fabric print quality, natural daylight, professional street-style photography.
+
+6. ETIQUETAS E TAGS (Serviços)
+Prompt: Minimalist rolls of custom adhesive labels and product tags with thin string. Contemporary graphic designs, soft pastel colors mixed with CMYK accents. Top-down flat lay photography on a clean white wooden surface.
+
+7. CATÁLOGOS E EDITORIAL (Serviços)
+Prompt: An open premium marketing catalog on a marble desk. Pages showing high-quality photography and clean layouts. Visible soft-touch lamination finish, professional editorial lighting, elegant and organized workspace.
+
+8. INFOGRÁFICO "COMO FUNCIONA" (Processo)
+Prompt: A clean, 3D isometric illustration of a creative process: a laptop showing a graphic design, a digital proof sheet, and a modern printing machine. Connected by glowing lines, bright CMYK color palette, translucent glass elements, 8k resolution.
+
+9. CLIENTES REAIS / DEPOIMENTOS (Social Proof)
+Prompt: Authentic portrait of a smiling young business owner in their shop, holding a freshly printed branded bag and business cards. Natural lighting, warm atmosphere, shallow depth of field, looking happy and satisfied.
+
+10. TIME CRIATIVO / STUDIO (Confiança)
+Prompt: A candid, professional photo of a diverse creative team brainstorming in a bright, modern design studio. Large windows, color swatches on the walls, high-end computers, collaborative and energetic vibe.
+
+11. TEXTURAS ABSTRATAS (Backgrounds)
+Prompt: Abstract background featuring smooth gradients of Cyan, Magenta, and Yellow. Subtle textures of crumpled fine-art paper and microscopic ink splatters. Elegant, artistic, and out of focus for website hero overlays.
