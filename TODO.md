@@ -1,7 +1,15 @@
-# TODO: Fix Vercel Build Errors
+    # Progresso: Correção de página branca no Vercel
 
-- [ ] 1. Fix tsconfig.app.json (malformed JSON, add moduleResolution: "bundler", skipLibCheck: true)
-- [ ] 2. Verify/update vite.config.ts types if needed
-- [ ] 3. Run `npm run build` to test
-- [ ] 4. Commit changes: "Fix TS config and build errors for Vercel"
-- [ ] 5. Push and redeploy Vercel
+✅ **Plano aprovado pelo usuário**
+
+**Passos do plano:**
+- [x] 1. Criar TODO.md com passos
+- [✅] 2. Identificar todos files (4 files)
+- [✅] 3. Editar hero.jsx - corrigir src="/assets/1.png"
+- [✅] 4. Editar vite.config.ts - remover base
+- [✅] 5. Editar Header.jsx, TrustSection.jsx, HowItWorks.jsx
+- [✅] 6. `npm run build` OK (dist/ pronto)
+
+- [ ] 7. Testar local
+- [ ] 8. `git add . && git commit -m "Fix image paths and vite base for Vercel" && git push`
+- [ ] 9. Verificar Vercel ~2min

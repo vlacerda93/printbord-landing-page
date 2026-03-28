@@ -6,7 +6,7 @@ export default function Header({ darkMode, toggleTheme }) {
     <header className="header">
       <div className="container header-content">
         <div className="logo">
-          <img src="./src/Imagens/logo1.png" alt="Printbord Logo" />
+          <img src="/assets/logo1.png" alt="Printbord Logo" />
         </div>
         <nav className="nav">
           <a href="#catalogo" className="hover-border-magenta">Catálogo</a>

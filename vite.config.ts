@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/printbord-landing-page/',
+// base: '/printbord-landing-page/',
   plugins: [
     react(),
     tailwindcss(),

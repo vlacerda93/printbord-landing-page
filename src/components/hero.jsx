@@ -35,7 +35,7 @@ export default function Hero() {
     <section className="hero reveal" ref={heroRef}>
       <div className="hero-background">
         <img
-src="./src/Imagens/1.png"
+          src="/assets/1.png"
           alt="Printbord Gráfica - Impressora Digital Moderna em Ação"
           className="hero-image"
         />

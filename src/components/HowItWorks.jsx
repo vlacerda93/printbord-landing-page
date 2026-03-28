@@ -35,7 +35,7 @@ export default function HowItWorks() {
     return (
         <section className="how-it-works-section">
             <div className="timeline-bg">
-                <img src="./src/Imagens/8.png" alt="Processo Criativo Printbord" className="timeline-bg-image" />
+                <img src="/assets/8.png" alt="Processo Criativo Printbord" className="timeline-bg-image" />
             </div>
             <div className="container">
                 <div className="how-it-works-header">

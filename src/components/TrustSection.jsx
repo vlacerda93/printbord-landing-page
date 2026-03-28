@@ -10,7 +10,7 @@ export default function TrustSection() {
   return (
     <section className="trust-section light-bg">
       <div className="trust-hero-bg">
-        <img src="./src/Imagens/10.png" alt="Time Criativo Printbord" className="trust-team-image" />
+        <img src="/assets/10.png" alt="Time Criativo Printbord" className="trust-team-image" />
         <div className="trust-overlay"></div>
       </div>
       <div className="container">
