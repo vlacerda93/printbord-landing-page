@@ -1,136 +1,122 @@
-* {
+/* src/styles/global.css - Global styles for Printbord Landing Page */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Inter:wght@400;500&display=swap');
+
+/* CSS Custom Properties (Variables) from specs */
+:root {
+  --azul-principal: #1A1AE0;
+  --verde-principal: #5CB85C;
+  --preto-fundo: #0A0A0F;
+  --azul-escuro: #0D0D6B;
+  --branco-texto: #F5F5F5;
+  --cinza-suave: #B0B0C0;
+  --verde-whatsapp: #25D366;
+}
+
+/* Base Reset - Modern, no Tailwind */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  font-family: 'Inter', 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--branco-texto);
+  background-color: var(--preto-fundo);
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.btn-primary {
-  background: var(--primary-gradient);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: var(--radius-xl);
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: var(--shadow-pulse);
-  transition: all var(--transition-base);
-  animation: pulse 2s infinite;
-  position: relative;
-  overflow: hidden;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
-.btn-primary:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 40px rgba(255,0,255,0.6);
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-.btn-primary:active {
-  transform: scale(0.98);
-}
-
-@keyframes pulse {
-  0%, 100% { box-shadow: var(--shadow-pulse); }
-  50% { box-shadow: 0 0 30px rgba(0,255,255,0.8); }
-}
-
-.hover-border-magenta {
-  position: relative;
+a {
+  color: inherit;
   text-decoration: none;
 }
 
-.hover-border-magenta::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--primary-gradient);
-  transition: width 0.3s ease;
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  cursor: pointer;
 }
 
-.hover-border-magenta:hover::after {
-  width: 100%;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.contact-btn {
-  composes: btn-primary;
-  font-weight: 900;
-  padding: 12px 32px;
-  box-shadow: 0 10px 30px rgba(0,255,255,0.4);
+ul, ol {
+  padding-left: 2rem;
 }
 
-.contact-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-  transition: left 0.5s;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-.contact-btn:hover::before {
-  left: 100%;
+/* Keyframes from specs */
+@keyframes pulse-whatsapp {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
 }
 
-.glassmorphism {
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  box-shadow: var(--shadow-lg);
+.btn-whatsapp {
+  animation: pulse-whatsapp 2s infinite;
 }
 
-.glassmorphism:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
 }
 
-.stat-card {
-  composes: glassmorphism;
-  padding: 2rem;
-  border-radius: var(--radius-2xl);
-  text-align: center;
-  max-width: 200px;
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
 }
 
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-.dark .glassmorphism {
-  background: rgba(15,23,42,0.8);
-}
-
-.neumorphism {
-  box-shadow: 8px 8px 16px rgba(0,0,0,0.1), -8px -8px 16px rgba(255,255,255,0.7);
-  border-radius: var(--radius-xl);
-  transition: all var(--transition-base);
-}
-
-.neumorphism:hover {
-  box-shadow: var(--neum-light), 0 0 20px rgba(0,255,255,0.3);
-}
-
-.dark .neumorphism {
-  box-shadow: 8px 8px 16px rgba(0,0,0,0.4), -8px -8px 16px rgba(255,255,255,0.2);
-}
-
-.dark .neumorphism:hover {
-  box-shadow: var(--neum-dark), 0 0 20px rgba(255,0,255,0.3);
-}
+/* Additional utilities will be added in component modules */
 

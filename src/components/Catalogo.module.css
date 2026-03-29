@@ -1,0 +1,74 @@
+.catalogo {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--azul-principal) 0%, var(--azul-escuro) 100%);
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(5rem, 15vw, 10rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--verde-principal), white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.text {
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  color: var(--branco-texto);
+  opacity: 0.95;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.subtext {
+  font-size: 1.1rem;
+  color: var(--cinza-suave);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.waBtn {
+  background: var(--verde-whatsapp);
+  color: white;
+  border-radius: 50px;
+  padding: 1.5rem 3rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  animation: pulse-whatsapp 2s infinite;
+  border: none;
+  cursor: pointer;
+}
+
+.waBtn:hover {
+  background: #128C7E;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(37, 211, 102, 0.5);
+}
+
+@media (max-width: 480px) {
+  .catalogo {
+    padding: 4rem 0;
+  }
+
+  .waBtn {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.1rem;
+  }
+}

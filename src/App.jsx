@@ -1,70 +1,57 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import './App.css';
-import './index.css';
-import Header from './components/Header.jsx';
-import Hero from './components/hero.jsx';
-import Services from './components/Services.jsx';
-import Portfolio from './components/Portfolio.jsx';
-import ProductGrid from './components/ProductGrid.jsx';
-import Testimonials from './components/Testimonials.jsx';
-import ContactCTA from './components/ContactCTA.jsx';
-import Footer from './components/Footer.jsx';
-import WhatsAppButton from './components/WhatsAppButton.jsx';
-import TrustSection from './components/TrustSection.jsx';
-import HowItWorks from './components/HowItWorks.jsx';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-// Icons if needed
-// import { SunIcon, MoonIcon } from './components/icons.jsx';
+
+import Navbar from './components/Navbar.jsx';
+
+
+import Hero from './components/Hero.jsx';
+
+import Sobre from './components/Sobre.jsx';
+
+import Categorias from './components/Categorias.jsx';
+
+import Portfolio from './components/Portfolio.jsx';
+
+import Catalogo from './components/Catalogo.jsx';
+
+import CTAWhatsApp from './components/CTAWhatsApp.jsx';
+
+import Footer from './components/Footer.jsx';
+
+function WhatsAppFixed() {
+  return (
+    <a href="https://wa.me/5581997067025" style={{ position: 'fixed', bottom: '2rem', right: '2rem', zIndex: 1000 }}>
+      <button className="btn-whatsapp" style={{ background: 'var(--verde-whatsapp)', color: 'white', borderRadius: '50px', padding: '1rem 1.5rem', fontSize: '1.1rem' }}>💬 WhatsApp</button>
+    </a>
+  );
+}
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
   useEffect(() => {
-    const saved = localStorage.getItem('darkMode') === 'true';
-    setDarkMode(saved);
+    AOS.init({
+      duration: 600,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 80,
+    });
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem('darkMode', darkMode.toString());
-    if (darkMode) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
-  }, [darkMode]);
-
-  const toggleTheme = () => {
-    setDarkMode(!darkMode);
-  };
-
   return (
-    <div className="app min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
-      {/* Pass theme prop to Header for toggle button */}
-      <Header darkMode={darkMode} toggleTheme={toggleTheme} />
-      
-      <AnimatePresence mode="wait">
-        <motion.main
-          key="main"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Hero />
-          <Services />
-          <HowItWorks />
-          <ProductGrid />
-          <Portfolio />
-          <TrustSection />
-          <Testimonials />
-          <ContactCTA />
-        </motion.main>
-      </AnimatePresence>
-      
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Sobre />
+        <Categorias />
+        <Portfolio />
+        <Catalogo />
+        <CTAWhatsApp />
+        <Footer />
+      </main>
+      <WhatsAppFixed />
+    </>
   );
 }
 
