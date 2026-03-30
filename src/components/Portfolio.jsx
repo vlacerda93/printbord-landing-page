@@ -1,96 +1,72 @@
-import React, { useState } from 'react';
-import Lightbox from 'yet-another-react-lightbox';
-import 'yet-another-react-lightbox/styles.css';
+import React, { useState, useEffect } from 'react';
 import styles from './Portfolio.module.css';
 
-const Portfolio = () => {
-  const [open, setOpen] = useState(false);
-  const [photoIndex, setPhotoIndex] = useState(0);
+// Import images from assets
+import vanImg from '../assets/images/van_envelopamento_new.png';
+import papelariaImg from '../assets/images/papelaria_new.png';
+import garrafasImg from '../assets/images/garrafas_new.png';
+import canecasImg from '../assets/images/canecas_new.png';
+import imasImg from '../assets/images/imas-095.jpg';
+import camisetasImg from '../assets/images/camisetas-093.jpg';
+import eventosImg from '../assets/images/eventos.png';
+import fotoImg from '../assets/images/foto_produtos.png';
 
+const Portfolio = () => {
   const slides = [
-    {
-src: '../Imagens/van_envelopamento.png',
-      title: 'Comunicação Visual',
-      alt: 'Van envelopamento'
-    },
-    {
-src: '../Imagens/papelaria_flutuando.png',
-      title: 'Papelaria',
-      alt: 'Papelaria flutuando'
-    },
-    {
-src: '../Imagens/garrafas_personalizadas.png',
-      title: 'Brindes e Presentes',
-      alt: 'Garrafas personalizadas'
-    },
-    {
-src: '../Imagens/canecas.png',
-      title: 'Brindes e Presentes',
-      alt: 'Canecas personalizadas'
-    },
-    {
-src: '../Imagens/cartoes_visita.png',
-      title: 'Papelaria',
-      alt: 'Cartões de visita'
-    },
-    {
-src: '../Imagens/convites.png',
-      title: 'Eventos',
-      alt: 'Convites'
-    },
-    {
-src: '../Imagens/credenciais.png',
-      title: 'Eventos',
-      alt: 'Credenciais'
-    },
-    {
-src: '../Imagens/backdrop.png',
-      title: 'Eventos',
-      alt: 'Backdrop de evento'
-    }
+    { src: vanImg, title: 'Comunicação Visual', alt: 'Envelopamento de frota comercial' },
+    { src: papelariaImg, title: 'Papelaria', alt: 'Identidade corporativa completa' },
+    { src: garrafasImg, title: 'Brindes', alt: 'Brindes premium para empresas' },
+    { src: canecasImg, title: 'Brindes', alt: 'Canecas personalizadas em estúdio' },
+    { src: eventosImg, title: 'Eventos', alt: 'Banner e sinalização em local de evento' },
+    { src: fotoImg, title: 'Foto Produtos', alt: 'Produtos fotográficos personalizados em casa' },
+    { src: camisetasImg, title: 'Fardamento', alt: 'Uniformes profissionais' },
+    { src: imasImg, title: 'Adesivos', alt: 'Ímãs e adesivos para geladeira' }
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % slides.length);
+    }, 11000); // 11 seconds average as requested (between 10 and 12)
+
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
   return (
-    <>
-      <section className={styles.portfolio} id="portfolio">
-        <div className={styles.container}>
-          <div className={styles.title}>
-            <h2 data-aos="fade-down">Nosso trabalho</h2>
-          </div>
-          <div className={styles.portfolioGrid}>
+    <section className={styles.portfolio} id="portfolio">
+      <div className={styles.container}>
+        <div className={styles.title}>
+          <h2 data-aos="fade-down">Nosso trabalho</h2>
+        </div>
+        <div className={styles.slideshowContainer} data-aos="zoom-in">
+          <div className={styles.slideWrapper}>
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className={styles.portfolioItem}
-                onClick={() => {
-                  setPhotoIndex(index);
-                  setOpen(true);
-                }}
-                data-aos="zoom-in"
-                data-aos-delay={index * 50}
+                className={`${styles.slide} ${index === currentIndex ? styles.active : ''}`}
+                style={{ backgroundImage: `url(${slide.src})` }}
+                aria-label={slide.alt}
               >
-                <img
-                  src={slide.src}
-                  alt={slide.alt}
-                  className={styles.portfolioImg}
-                  loading="lazy"
-                />
                 <div className={styles.overlay}>
-                  <span className={styles.overlayText}>{slide.title}</span>
+                  <h3 className={styles.overlayTitle}>{slide.title}</h3>
+                  <p className={styles.overlayText}>{slide.alt}</p>
                 </div>
               </div>
             ))}
+            <div className={styles.indicators}>
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  className={`${styles.indicator} ${index === currentIndex ? styles.indicatorActive : ''}`}
+                  onClick={() => setCurrentIndex(index)}
+                />
+              ))}
+            </div>
           </div>
         </div>
-      </section>
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        slides={slides}
-        index={photoIndex}
-        on={{ view: ({ index: currentIndex }) => setPhotoIndex(currentIndex) }}
-      />
-    </>
+      </div>
+    </section>
   );
 };
 

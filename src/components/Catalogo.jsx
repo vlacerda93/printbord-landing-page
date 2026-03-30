@@ -13,14 +13,7 @@ const Catalogo = () => {
         <p className={styles.subtext}>
           De banners a brindes, de fardamentos a papelaria fina — se você precisa imprimir, a Print Bord faz.
         </p>
-        <a 
-          href="https://wa.me/5581997067025" 
-          className={styles.waBtn}
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          Fale com a gente no WhatsApp
-        </a>
+
       </div>
     </section>
   );

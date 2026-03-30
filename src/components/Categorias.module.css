@@ -35,56 +35,86 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid transparent;
+  position: relative;
+  background: var(--azul-escuro);
   border-radius: 20px;
-  padding: 2.5rem 2rem;
-  text-align: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  backdrop-filter: blur(10px);
+  overflow: hidden;
+  height: 350px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
   border-color: var(--verde-principal);
-  box-shadow: 0 25px 50px rgba(92, 184, 92, 0.25);
+}
+
+.cardImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.1);
+}
+
+.cardContent {
+  position: relative;
+  height: 100%;
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(10, 10, 15, 0.95) 40%, rgba(10, 10, 15, 0.4));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
 }
 
 .iconWrapper {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, var(--azul-principal), var(--verde-principal));
-  border-radius: 20px;
+  width: 60px;
+  height: 60px;
+  background: var(--verde-principal);
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  box-shadow: 0 10px 30px rgba(26, 26, 224, 0.3);
+  box-shadow: 0 10px 20px rgba(92, 184, 92, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .iconWrapper {
+  transform: rotate(10deg);
 }
 
 .icon {
   color: white;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .cardTitle {
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--branco-texto);
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
+  color: white;
+  margin-bottom: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .cardExamples {
-  color: var(--cinza-suave);
   font-size: 0.95rem;
-  line-height: 1.6;
+  color: var(--cinza-suave);
+  line-height: 1.5;
+  opacity: 0.9;
   max-width: 250px;
   margin: 0 auto;
 }
