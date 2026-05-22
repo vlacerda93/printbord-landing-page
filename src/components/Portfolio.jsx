@@ -6,7 +6,7 @@ import vanImg from '../assets/images/van_envelopamento_new.png';
 import papelariaImg from '../assets/images/papelaria_new.png';
 import garrafasImg from '../assets/images/garrafas_new.png';
 import canecasImg from '../assets/images/canecas_new.png';
-import imasImg from '../assets/images/adesivos_geladeira_novo.png';
+import imasImg from '../assets/images/adesivos_flatlay_novo.png';
 import camisetasImg from '../assets/images/fardamentos_novo.png';
 import eventosImg from '../assets/images/eventos.png';
 import fotoImg from '../assets/images/foto_produtos.png';
