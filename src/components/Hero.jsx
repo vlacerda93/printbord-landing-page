@@ -18,9 +18,9 @@ const Hero = () => {
       </div>
       <div className={styles.content}>
         <img src={logoSrc} alt="Print Bord" className={styles.heroLogo} />
-        <h1 className={styles.headline}>Sua marca impressa com qualidade</h1>
+        <h1 className={styles.headline}>A melhor Gráfica Digital da Região Metropolitana de Recife</h1>
         <p className={styles.subheadline}>
-          Gráfica digital em Recife com mais de 500 produtos para o seu negócio
+          Aqui produzimos com qualidade Premium mais de 500 tipos de produtos.
         </p>
         <a href="#categorias" className={styles.scrollBtn} onClick={scrollToCategorias}>
           Ver nossos produtos ↓
