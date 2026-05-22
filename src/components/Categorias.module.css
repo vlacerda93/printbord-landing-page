@@ -1,12 +1,54 @@
 .categorias {
   padding: 6rem 0;
   background: var(--preto-fundo);
+  position: relative;
+  overflow: hidden;
+}
+
+.dynamicBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.blob1, .blob2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.25;
+  animation: moveBlobCat 15s infinite alternate ease-in-out;
+}
+
+.blob1 {
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.8) 0%, transparent 70%);
+  top: -10%;
+  right: -10%;
+}
+
+.blob2 {
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, rgba(255, 20, 147, 0.5) 0%, transparent 70%);
+  bottom: -20%;
+  left: -10%;
+  animation-delay: -5s;
+}
+
+@keyframes moveBlobCat {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-10vw, 5vh) scale(1.1); }
+  100% { transform: translate(5vw, -10vh) scale(0.9); }
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .title {
@@ -47,8 +89,9 @@
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
 .cardContainer.flipped .flipper {
@@ -62,11 +105,15 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: var(--azul-escuro);
+}
+.front {
+  transform: rotateY(0deg);
 }
 
 .cardContainer:hover .front {

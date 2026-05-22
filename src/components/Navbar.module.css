@@ -11,7 +11,7 @@
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -25,19 +25,22 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .navLinks a {
-  color: var(--cinza-suave);
-  font-weight: 500;
-  transition: color 0.3s ease;
-  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .navLinks a:hover {
-  color: var(--branco-texto);
+  color: var(--verde-principal);
+  transform: translateY(-2px);
 }
 
 .waNavBtn {

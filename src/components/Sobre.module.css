@@ -1,6 +1,46 @@
 .sobre {
   padding: 6rem 0;
-  background: var(--azul-escuro);
+  background: var(--preto-fundo);
+  position: relative;
+  overflow: hidden;
+}
+
+.dynamicBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.blob1, .blob2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: moveBlobSobre 15s infinite alternate ease-in-out;
+}
+
+.blob1 {
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(0, 50, 150, 0.8) 0%, transparent 70%);
+  top: -10%;
+  left: -10%;
+}
+
+.blob2 {
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, rgba(0, 150, 100, 0.6) 0%, transparent 70%);
+  bottom: -20%;
+  right: -10%;
+  animation-delay: -5s;
+}
+
+@keyframes moveBlobSobre {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(10vw, 5vh) scale(1.1); }
+  100% { transform: translate(-5vw, 10vh) scale(0.9); }
 }
 
 .container {
@@ -11,6 +51,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .textContent h2 {
@@ -43,6 +85,7 @@
   transition: all 0.3s ease;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,12 +114,31 @@
   margin-top: 0.5rem;
 }
 
-.equipeImg {
+.imageCarousel {
+  position: relative;
   width: 100%;
-  height: 400px;
-  object-fit: cover;
+  height: 450px;
   border-radius: 20px;
+  overflow: hidden;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.equipeImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1.5s ease-in-out, transform 15s linear;
+}
+
+.activeImg {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
 }
 
 @media (max-width: 768px) {

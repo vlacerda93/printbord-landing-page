@@ -29,6 +29,10 @@ const depoimentos = [
 const Depoimentos = () => {
   return (
     <section className={styles.depoimentos} id="depoimentos">
+      <div className={styles.dynamicBg}>
+        <div className={styles.blob1}></div>
+        <div className={styles.blob2}></div>
+      </div>
       <div className={styles.container}>
         <div className={styles.title} data-aos="fade-up">
           <h2>O Que Nossos Clientes Dizem</h2>

@@ -95,6 +95,10 @@ const Categorias = () => {
 
   return (
     <section className={styles.categorias} id="categorias">
+      <div className={styles.dynamicBg}>
+        <div className={styles.blob1}></div>
+        <div className={styles.blob2}></div>
+      </div>
       <div className={styles.container}>
         <div className={styles.title}>
           <h2 data-aos="fade-down">O que fazemos</h2>

@@ -109,8 +109,8 @@
 }
 
 .heroLogo {
-  height: clamp(120px, 25vw, 180px);
-  max-height: 180px;
+  height: clamp(180px, 35vw, 250px);
+  max-height: 250px;
   filter: drop-shadow(0 10px 30px rgba(26, 26, 224, 0.3));
   animation: float 6s ease-in-out infinite;
 }

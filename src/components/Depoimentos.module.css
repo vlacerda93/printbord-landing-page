@@ -2,6 +2,45 @@
   padding: 6rem 0;
   background: var(--preto-fundo);
   position: relative;
+  overflow: hidden;
+}
+
+.dynamicBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.blob1, .blob2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.2;
+  animation: moveBlobDep 15s infinite alternate ease-in-out;
+}
+
+.blob1 {
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(255, 69, 0, 0.7) 0%, transparent 70%);
+  top: 10%;
+  left: -20%;
+}
+
+.blob2 {
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.5) 0%, transparent 70%);
+  bottom: -10%;
+  right: -10%;
+  animation-delay: -5s;
+}
+
+@keyframes moveBlobDep {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(10vw, -5vh) scale(1.1); }
+  100% { transform: translate(-5vw, 10vh) scale(0.9); }
 }
 
 .depoimentos::before {
@@ -12,12 +51,15 @@
   right: 0;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  z-index: 1;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .title {

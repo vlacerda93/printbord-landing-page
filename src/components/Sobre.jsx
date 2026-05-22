@@ -1,11 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import CountUp from 'react-countup';
 import styles from './Sobre.module.css';
-import equipeSrc from '../assets/images/equipe.png';
+
+// Carousel Images
+import img1 from '../assets/images/grafica_equipe_1_1779454793702.png';
+import img2 from '../assets/images/grafica_equipe_2_1779454822569.png';
+import img3 from '../assets/images/grafica_equipe_3_1779454854159.png';
+import img4 from '../assets/images/grafica_equipe_4_1779454893684.png';
 
 const Sobre = () => {
+  const [currentImg, setCurrentImg] = useState(0);
+  const images = [img1, img2, img3, img4];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImg((prev) => (prev + 1) % images.length);
+    }, 15000); // 15 seconds per image
+
+    return () => clearInterval(timer);
+  }, [images.length]);
+
   return (
     <section className={styles.sobre} id="sobre">
+      {/* Dynamic Background matching 500+ section but darker */}
+      <div className={styles.dynamicBg}>
+        <div className={styles.blob1}></div>
+        <div className={styles.blob2}></div>
+      </div>
+      
       <div className={styles.container}>
         <div className={styles.textContent}>
           <h2 data-aos="fade-up" data-aos-delay="100">Quem somos</h2>
@@ -32,13 +54,17 @@ const Sobre = () => {
             </div>
           </div>
         </div>
-        <img 
-          src={equipeSrc} 
-          alt="Equipe Print Bord em Recife" 
-          className={styles.equipeImg}
-          data-aos="fade-left"
-          data-aos-delay="600"
-        />
+        
+        <div className={styles.imageCarousel} data-aos="fade-left" data-aos-delay="600">
+          {images.map((src, idx) => (
+            <img 
+              key={idx}
+              src={src} 
+              alt="Equipe Print Bord trabalhando" 
+              className={`${styles.equipeImg} ${idx === currentImg ? styles.activeImg : ''}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

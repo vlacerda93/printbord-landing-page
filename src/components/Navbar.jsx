@@ -37,10 +37,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <a href="#hero" className={styles.logoLink}>
-        <img src={logoSrc} alt="Print Bord - Gráfica Digital" className={styles.logo} />
-      </a>
-
+      {/* Logo remocida por solicitação do cliente */}
       <ul className={styles.navLinks}>
         {navLinks.map((link) => (
           <li key={link.name}>

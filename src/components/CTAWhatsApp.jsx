@@ -4,6 +4,10 @@ import styles from './CTAWhatsApp.module.css';
 const CTAWhatsApp = () => {
   return (
     <section className={styles.cta} id="cta" data-aos="fade-up">
+      <div className={styles.dynamicBg}>
+        <div className={styles.blob1}></div>
+        <div className={styles.blob2}></div>
+      </div>
       <div className={styles.container}>
         <h2 className={styles.title}>Pronto para fazer seu pedido?</h2>
         <p className={styles.subtitle}>
