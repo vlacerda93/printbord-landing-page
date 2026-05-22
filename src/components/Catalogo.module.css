@@ -1,7 +1,15 @@
 .catalogo {
   padding: 6rem 0;
-  background: linear-gradient(135deg, var(--azul-principal) 0%, var(--azul-escuro) 100%);
+  background: linear-gradient(-45deg, var(--azul-principal), #5a1ae0, var(--azul-escuro), #00d2ff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   text-align: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .container {
