@@ -51,11 +51,6 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <a href="https://wa.me/5581997067025" className={styles.waNavBtn} target="_blank" rel="noopener noreferrer">
-        <Phone className={styles.phoneIcon} size={20} />
-        WhatsApp
-      </a>
-
       <div className={styles.hamburger} onClick={toggleMenu}>
         <span />
         <span />
@@ -69,9 +64,6 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a href="https://wa.me/5581997067025" className={styles.waNavBtn} target="_blank" rel="noopener noreferrer">
-            💬 WhatsApp
-          </a>
         </nav>
       )}
     </nav>

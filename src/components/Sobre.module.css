@@ -58,11 +58,10 @@
 
 .statNumber {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1.2rem, 4vw, 2.2rem);
+  font-size: clamp(1rem, 3vw, 2rem);
   font-weight: 900;
   color: var(--verde-principal);
   line-height: 1.2;
-  word-break: break-word;
 }
 
 .statLabel {
