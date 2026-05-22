@@ -6,17 +6,18 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY || '');
 
 const SYSTEM_PROMPT = `
-Você é a Tácia, a assistente virtual super simpática e prestativa da gráfica digital Print Bord, localizada em Recife - PE.
-O seu objetivo é ajudar os clientes a tirarem dúvidas sobre os produtos (adesivos, fardamentos, brindes, comunicação visual, papelaria corporativa, foto produtos, etc).
-Seja sempre gentil, use emojis, e foque em mostrar que a Print Bord tem qualidade premium e agilidade (mais de 500 produtos disponíveis).
-Não forneça preços exatos de forma alguma. Diga que o valor varia com a quantidade e formato, e convide o cliente a chamar no WhatsApp (81) 99706-7025 para um orçamento detalhado e rápido.
-Responda de forma curta e direta, não escreva textos muito longos.
+Você é a Karla, a dona e especialista da gráfica digital Print Bord, localizada em Recife - PE.
+O seu tom é muito profissional, inteligente, porém humano e acolhedor (como uma dona conversando com seu cliente).
+O seu objetivo é ajudar os clientes a tirarem dúvidas sobre os produtos. A gráfica FAZ de tudo: adesivos, fardamentos (camisas, batas), brindes (canecas, garrafas), comunicação visual, papelaria corporativa, etc.
+Se perguntarem se fazem algo (ex: "fazem camisas?"), diga sempre com entusiasmo que sim, que a Print Bord tem qualidade premium e agilidade (mais de 500 produtos disponíveis).
+NUNCA forneça preços exatos. Diga de forma elegante que os valores variam de acordo com a quantidade, tecido/material e formato, e convide o cliente a continuar a conversa no WhatsApp (81) 99706-7025 para você ou sua equipe montar um orçamento detalhado e rápido.
+Responda de forma direta e inteligente, evite textos longos.
 `;
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { role: 'model', text: 'Olá! Sou a Tácia, assistente da Print Bord. Como posso ajudar você hoje com seus materiais gráficos? ✨' }
+    { role: 'model', text: 'Olá! Sou a Karla, dona da Print Bord. Em que posso te ajudar hoje com os seus materiais gráficos? ✨' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -51,12 +52,14 @@ const Chatbot = () => {
         systemInstruction: SYSTEM_PROMPT 
       });
       
-      // Filter out the initial greeting if it doesn't match the strict history requirements,
-      // but generative-ai handles it fine if we map it properly.
-      const chatHistory = messages.map(msg => ({
-        role: msg.role === 'model' ? 'model' : 'user',
-        parts: [{ text: msg.text }]
-      }));
+      // Filter out the initial greeting to prevent API history validation errors
+      // (Gemini API requires history to start with a 'user' message if not empty)
+      const chatHistory = messages
+        .slice(1)
+        .map(msg => ({
+          role: msg.role === 'model' ? 'model' : 'user',
+          parts: [{ text: msg.text }]
+        }));
 
       const chat = model.startChat({
         history: chatHistory,
@@ -71,7 +74,7 @@ const Chatbot = () => {
       console.error('Erro no chatbot:', error);
       setMessages(prev => [...prev, { 
         role: 'model', 
-        text: 'Desculpe, estou com um probleminha técnico no momento. Por favor, nos chame no WhatsApp: (81) 99706-7025!' 
+        text: 'Desculpe, deu um erro de comunicação aqui no sistema. Mas nós fazemos quase de tudo! Por favor, me chama lá no WhatsApp: (81) 99706-7025 e a gente fecha o seu pedido!' 
       }]);
     } finally {
       setIsLoading(false);
@@ -94,8 +97,8 @@ const Chatbot = () => {
         <div className={styles.chatWindow}>
           <div className={styles.header}>
             <div className={styles.headerInfo}>
-              <h3>Tácia 🤖</h3>
-              <p>Assistente Print Bord</p>
+              <h3>Karla ✨</h3>
+              <p>Dona | Print Bord</p>
             </div>
             <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>
               <X size={24} />
