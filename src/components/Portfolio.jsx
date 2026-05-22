@@ -5,7 +5,7 @@ import styles from './Portfolio.module.css';
 import vanImg from '../assets/images/van_envelopamento_new.png';
 import papelariaImg from '../assets/images/papelaria_new.png';
 import garrafasImg from '../assets/images/garrafas_new.png';
-import canecasImg from '../assets/images/canecas_new.png';
+import canecasImg from '../assets/images/brindes_flatlay_novo.png';
 import imasImg from '../assets/images/adesivos_flatlay_novo.png';
 import camisetasImg from '../assets/images/fardamentos_novo.png';
 import eventosImg from '../assets/images/eventos_pernambuco_novo.png';
