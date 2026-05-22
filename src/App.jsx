@@ -17,8 +17,8 @@ import Catalogo from './components/Catalogo.jsx';
 import Depoimentos from './components/Depoimentos.jsx';
 
 import CTAWhatsApp from './components/CTAWhatsApp.jsx';
-
 import Footer from './components/Footer.jsx';
+import Chatbot from './components/Chatbot.jsx';
 
 
 
@@ -45,7 +45,7 @@ function App() {
         <CTAWhatsApp />
         <Footer />
       </main>
-
+      <Chatbot />
     </>
   );
 }
