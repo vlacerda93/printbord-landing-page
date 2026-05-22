@@ -13,8 +13,8 @@ import Sobre from './components/Sobre.jsx';
 import Categorias from './components/Categorias.jsx';
 
 import Portfolio from './components/Portfolio.jsx';
-
 import Catalogo from './components/Catalogo.jsx';
+import Depoimentos from './components/Depoimentos.jsx';
 
 import CTAWhatsApp from './components/CTAWhatsApp.jsx';
 
@@ -41,6 +41,7 @@ function App() {
         <Categorias />
         <Portfolio />
         <Catalogo />
+        <Depoimentos />
         <CTAWhatsApp />
         <Footer />
       </main>

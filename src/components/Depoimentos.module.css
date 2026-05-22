@@ -1,0 +1,105 @@
+.depoimentos {
+  padding: 6rem 0;
+  background: var(--preto-fundo);
+  position: relative;
+}
+
+.depoimentos::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title h2 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: #ffffff;
+  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+
+.title p {
+  font-size: 1.1rem;
+  color: var(--cinza-suave);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  transition: all 0.4s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(92, 184, 92, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.iconWrapper {
+  margin-bottom: 1.5rem;
+}
+
+.quoteIcon {
+  color: var(--verde-principal);
+  opacity: 0.5;
+}
+
+.texto {
+  color: var(--cinza-suave);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.stars {
+  display: flex;
+  gap: 0.2rem;
+  color: #FFD700;
+  margin-bottom: 1.5rem;
+}
+
+.authorInfo h4 {
+  color: var(--branco-texto);
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+
+.authorInfo span {
+  color: var(--azul-principal);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
