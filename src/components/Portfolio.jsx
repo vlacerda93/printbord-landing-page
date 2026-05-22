@@ -8,7 +8,7 @@ import garrafasImg from '../assets/images/garrafas_new.png';
 import canecasImg from '../assets/images/canecas_new.png';
 import imasImg from '../assets/images/adesivos_flatlay_novo.png';
 import camisetasImg from '../assets/images/fardamentos_novo.png';
-import eventosImg from '../assets/images/eventos.png';
+import eventosImg from '../assets/images/eventos_pernambuco_novo.png';
 import fotoImg from '../assets/images/foto_produtos.png';
 
 const Portfolio = () => {

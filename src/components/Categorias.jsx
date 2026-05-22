@@ -7,7 +7,7 @@ import visualImg from '../assets/images/van_envelopamento_new.png';
 import brindesImg from '../assets/images/canecas_new.png';
 import papelariaImg from '../assets/images/papelaria_new.png';
 import fotoImg from '../assets/images/foto_produtos.png';
-import eventosImg from '../assets/images/eventos.png';
+import eventosImg from '../assets/images/eventos_pernambuco_novo.png';
 import fardamentosImg from '../assets/images/fardamentos_novo.png';
 
 const CategoryCard = ({ cat, index }) => {
