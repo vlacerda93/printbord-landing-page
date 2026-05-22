@@ -15,10 +15,9 @@
 
 .textContent h2 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
-  background: linear-gradient(135deg, var(--branco-texto), var(--cinza-suave));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
+  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.5);
   margin-bottom: 1.5rem;
 }
 
